@@ -1,57 +1,15 @@
 import { useState, useEffect } from "react";
 import React from 'react'
-import { useParams } from 'react-router-dom'
 
-export default function Pokecard() {
-
-const { name } = useParams()
-const [card, setCard] = useState()
-
-
+function Pokecard({pokemon, i}) {
 
   return (
-    <div>
-        <h1></h1>
+    <div className="card">
+        <h1 className="pokeName">ඞ{pokemon.name}</h1>
+        <img className="pokeImage"src={pokemon.image} alt={pokemon.name} />
+        <p className="pokeType">{pokemon.type}ඞ</p>
     </div>
   )
 }
 
-{
-    pokemon: [
-      {
-        id: 1,
-        name: "Charmander",
-        type: "fire",
-        image:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-      },
-      {
-        id: 2,
-        name: "Squirtle",
-        type: "water",
-        image:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-      },
-      {
-        id: 3,
-        name: "Butterfree",
-        type: "flying",
-        image:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
-      },
-      {
-        id: 4,
-        name: "Rattata",
-        type: "normal",
-        image:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
-      },
-      {
-        id: 5,
-        name: "Metapod",
-        type: "bug",
-        image:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-      },
-    ];
-  }
+export default Pokecard
