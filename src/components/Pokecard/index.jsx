@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from 'react'
 
-function Pokecard({pokemon, i}) {
+function Pokecard({pokemon}) {
 
   return (
     <div className="card">
